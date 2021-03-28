@@ -30,15 +30,13 @@ function timerMilli() {
         if (secTime < 10) secTime = "0" + secTime;
         secI[0].innerHTML = secTime;
 
-        if (secTime > 9) {
+        if (secTime > 59) {
             secTime = 0;
             secI[0].innerHTML = "00";
 
             minTime++;
             if (minTime < 10) minTime = "0" + minTime;
             minI[0].innerHTML = minTime;
-
-            // console.log(minTime);
         }
     }
 }
