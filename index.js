@@ -73,5 +73,7 @@ function resumeTime() {
 function resetTime() {
     clearInterval(testMilli);
     start[0].style.display = "inline-block";
+    resume[0].disabled = false;
+    pause[0].disabled = false;
     initialize();
 }

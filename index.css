@@ -1,0 +1,42 @@
+:root {
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom right, #000080, #8080ff);
+    height: 100vh;
+}
+
+header h1 {
+    align-items: center;
+    text-align: center;
+    font-size: 5rem;
+    color: #00ff00;
+}
+
+main {
+    align-items: center;
+    text-align: center;
+}
+
+.time {
+    display: flex;
+    width: 200px;
+    margin: 5rem auto;
+    text-align: center;
+    justify-content: space-evenly;
+    font-size: 3rem;
+    color: #00ff00;
+}
+
+.buttons {
+    display: flex;
+    width: 300px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.buttons button {
+    width: 100px;
+}
