@@ -11,10 +11,26 @@ const milliSecInterval = 10;
 var testMilli;
 var testSec;
 var testMin;
+const start = document.getElementsByClassName("start");
+const pause = document.getElementsByClassName("pause");
+const resume = document.getElementsByClassName("resume");
+const reset = document.getElementsByClassName("reset");
 
 // Functions
+function initialize() {
+    milliTime = 0;
+    secTime = 0;
+    minTime = 0;
+    milliI[0].innerHTML = "00";
+    secI[0].innerHTML = "00";
+    minI[0].innerHTML = "00";
+}
+
 function startTime() {
     testMilli = setInterval(timerMilli, milliSecInterval);
+    start[0].style.display = "none";
+    resume[0].disabled = true;
+    start[0].style.display = "none";
 }
 
 function timerMilli() {
@@ -44,8 +60,18 @@ function timerMilli() {
 //
 function stopTime() {
     clearInterval(testMilli);
+    resume[0].disabled = false;
+    pause[0].disabled = true;
 }
 
 function resumeTime() {
     startTime();
+    resume[0].disabled = true;
+    pause[0].disabled = false;
+}
+
+function resetTime() {
+    clearInterval(testMilli);
+    start[0].style.display = "inline-block";
+    initialize();
 }
