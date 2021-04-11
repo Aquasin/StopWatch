@@ -24,13 +24,17 @@ function initialize() {
     milliI[0].innerHTML = "00";
     secI[0].innerHTML = "00";
     minI[0].innerHTML = "00";
+    pause[0].style.display = "none";
+    resume[0].style.display = "none";
+    reset[0].style.display = "none";
 }
 
 function startTime() {
     testMilli = setInterval(timerMilli, milliSecInterval);
     start[0].style.display = "none";
-    resume[0].disabled = true;
-    start[0].style.display = "none";
+    pause[0].style.display = "block";
+    resume[0].style.display = "none";
+    reset[0].style.display = "block";
 }
 
 function timerMilli() {
@@ -60,19 +64,19 @@ function timerMilli() {
 //
 function stopTime() {
     clearInterval(testMilli);
-    resume[0].disabled = false;
-    pause[0].disabled = true;
+    pause[0].style.display = "none";
+    resume[0].style.display = "block";
 }
 
 function resumeTime() {
     startTime();
-    resume[0].disabled = true;
-    pause[0].disabled = false;
+    pause[0].style.display = "block";
+    resume[0].style.display = "none";
 }
 
 function resetTime() {
     clearInterval(testMilli);
-    start[0].style.display = "inline-block";
+    start[0].style.display = "block";
     resume[0].disabled = false;
     pause[0].disabled = false;
     initialize();

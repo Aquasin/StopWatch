@@ -4,7 +4,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to bottom right, #000080, #8080ff);
+    background-image: linear-gradient(to bottom right, #222222, #555555);
     height: 100vh;
 }
 
@@ -12,7 +12,7 @@ header h1 {
     align-items: center;
     text-align: center;
     font-size: 5rem;
-    color: #00ff00;
+    color: #ffffff;
 }
 
 main {
@@ -27,16 +27,31 @@ main {
     text-align: center;
     justify-content: space-evenly;
     font-size: 3rem;
-    color: #00ff00;
+    color: #ffffff;
 }
 
 .buttons {
     display: flex;
-    width: 300px;
+    width: 350px;
     margin: 0 auto;
     justify-content: space-evenly;
 }
 
 .buttons button {
-    width: 100px;
+    width: 150px;
+    height: 50px;
+    border-radius: 1rem;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.buttons button:first-child {
+    width: 300px;
+}
+
+.pause,
+.resume,
+.reset {
+    display: none;
 }
