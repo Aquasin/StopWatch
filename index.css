@@ -10,6 +10,7 @@ header h1 {
     text-align: center;
     font-size: 5rem;
     color: #ffffff;
+    font-family: serif;
 }
 
 main {
@@ -27,6 +28,10 @@ main {
     color: #ffffff;
 }
 
+.time .milli {
+    color: #ff0000;
+}
+
 .buttons {
     display: flex;
     width: 350px;
@@ -38,6 +43,7 @@ main {
     width: 150px;
     height: 50px;
     border-radius: 1rem;
+    border: 3px solid black;
     background-color: #ff0000;
     color: #ffffff;
     font-size: 1.5rem;
